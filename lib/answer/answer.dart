@@ -8,8 +8,17 @@ class AnswerScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Your answer to the question is...")),
-      body: Center(
-        child: Text(message),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text(message),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text("Go back!"),
+          )
+        ],
       ),
     );
   }
